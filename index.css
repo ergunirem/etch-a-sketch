@@ -1,0 +1,19 @@
+html {
+    background-color: rgb(205, 235, 211);
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    word-spacing: 30px;
+    background-image: url(https://st3.depositphotos.com/5580114/18854/v/1600/depositphotos_188543524-stock-illustration-abstract-geometric-pattern-with-small.jpg);
+    background-repeat: no-repeat;
+}
+
