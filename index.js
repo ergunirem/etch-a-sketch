@@ -1,6 +1,5 @@
-// SELECTORS
+// SELECTORS & VARIABLES
 const container = document.getElementById("container");
-
 let currentColor = "black"
 
 // EVENTS
@@ -13,12 +12,10 @@ document.getElementById("random").addEventListener("click", randomColor);
 // FUNCTIONS
 
 function createGrid() {
-    //Removes old grid elements when a new grid is created
     resetGrid()
 
-    //Get input values for sketch book size
     const width = parseInt(document.getElementById("width").value);
-    const height = parseInt(document.getElementById("height").value);   
+    const height = parseInt(document.getElementById("height").value); 
 
     container.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${height}, 1fr)`;
@@ -26,9 +23,7 @@ function createGrid() {
     for (let i = 0; i < height*width; i++) {
         const square = document.createElement("div");
         square.className = "square";
-        square.id = i + 1;
-        square.style.backgroundColor = "#FDFEF1"
-        square.style.borderColor = "#F9FDF2";
+        square.style.background = "#E6E6E6"
         container.appendChild(square);
     }
 };
@@ -40,10 +35,10 @@ function resetGrid() {
 
 function clearGrid() {
     const squares = document.querySelectorAll(".square");
-    squares.forEach(square => square.style.backgroundColor = "#FDFEF1");
-    squares.forEach(square => square.style.border = "#FDFEF1");
+    squares.forEach(square => square.style.backgroundColor = "#E6E6E6");
+    squares.forEach(square => square.style.border = "#E6E6E6");
     squares.forEach(square => square.onmouseover = function() {
-        square.style.backgroundColor = "#FDFEF1"
+        square.style.backgroundColor = "#E6E6E6"
     });
 };
 
