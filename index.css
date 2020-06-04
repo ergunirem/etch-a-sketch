@@ -1,17 +1,29 @@
+/* GENERAL */
+body {
+    background-image: linear-gradient(#F2F2F2, #A9C4CA);
+}
+
+/* HEADER AND BUTTONS STYLE */
 #upper-container {
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 5px;
-}
-
-#size {
-    grid-column: 2 / 4;
-
+    grid-template-rows: (100px 100px);
+    grid-gap: 20px;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Rosario', sans-serif;
 }
 
 header {
     grid-column: 1 / 2;
+    text-align: center;
+}
+
+#size {
+    align-items: center;
+    grid-column: 3 / 4;
+
 }
 
 /* SKETCH BOOK GRID STYLE */
@@ -30,7 +42,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center; 
-    font-family: Georgia, sans-serif;
+    font-family: 'Rosario', sans-serif;
     font-weight: bold;
     font-size: 15px;
     word-spacing: 10px;
