@@ -9,14 +9,21 @@
         <header>
             <h1>Etch Your Sketch</h1>
         </header>
-        <div class="operators">
-            <input type="number" placeholder="Sketch Book Size"> 
-            <button>Create</button>
+        <div id="operators">
+            <p>Choose Your Sketch Book Size</p>
+            <div id="size">
+                <input type="number" id="height" placeholder="Height" required> 
+                <span id="times">x</span>
+                <input type="number" id="width" placeholder="Width" required> 
+                <button type="submit" id="submit" class="button"value="Submit">Create</button> 
+            </div>
+            <button id="clear" class="button">Clear</button>
+            <button id="black" class="button">Black</button>
+            <button id="random" class="button">Random Color</button>
+            <div class="container" id="container">
+            </div>
         </div>
-        <div class="container">
-
-        </div>
-        <footer>Irem's Project 2020</footer>
+        <footer> 2020 - Created by Irem for The Odin Project</footer>
     </body>
     <script type="text/javascript" src="index.js"></script>
 </html>
