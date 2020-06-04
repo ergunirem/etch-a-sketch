@@ -1,25 +1,24 @@
 // SELECTORS
-
-const height = parseInt(document.getElementById("height").value);
-console.log(height)
-console.log(typeof height)
-    
-const width = parseInt(document.getElementById("width").value);
-console.log(width)
-
 const container = document.getElementById("container");
 
 let currentColor = "black"
-// EVENTS
-document.getElementById("submit").addEventListener("click", createGrid(height, width));
 
-document.getElementById("delete").addEventListener("click", deleteGrid);
+// EVENTS
+
+document.getElementById("submit").addEventListener("click", createGrid);
+document.getElementById("clear").addEventListener("click", clearGrid);
+document.getElementById("black").addEventListener("click", color);
 document.getElementById("random").addEventListener("click", randomColor);
+
 // FUNCTIONS
 
-function createGrid(height, width) {
+function createGrid() {
     //Removes old grid elements when a new grid is created
     resetGrid()
+
+    //Get input values for sketch book size
+    const width = parseInt(document.getElementById("width").value);
+    const height = parseInt(document.getElementById("height").value);   
 
     container.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${height}, 1fr)`;
@@ -32,7 +31,6 @@ function createGrid(height, width) {
         square.style.borderColor = "#F9FDF2";
         container.appendChild(square);
     }
-    color();
 };
 
 function resetGrid() {
@@ -40,13 +38,17 @@ function resetGrid() {
     squares.forEach(square => square.remove());
 }
 
-function deleteGrid() {
+function clearGrid() {
     const squares = document.querySelectorAll(".square");
-    squares.forEach(square => square.style.backgroundColor = "transparent");
-    squares.forEach(square => square.style.border = "transparent");
+    squares.forEach(square => square.style.backgroundColor = "#FDFEF1");
+    squares.forEach(square => square.style.border = "#FDFEF1");
+    squares.forEach(square => square.onmouseover = function() {
+        square.style.backgroundColor = "#FDFEF1"
+    });
 };
 
 function color() {
+    currentColor = "black"
     const squares = document.querySelectorAll(".square");
     squares.forEach(square => square.onmouseover = function() {
         square.style.backgroundColor = currentColor
@@ -55,10 +57,8 @@ function color() {
 
 function randomColor() {
     currentColor = '#'+ Math.floor(Math.random()*16777215).toString(16);
-
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => square.onmouseover = function() {
+        square.style.backgroundColor = currentColor
+    });
 }
-
-function rainbowColor() {
-
-}
-
