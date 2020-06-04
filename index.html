@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
-        <header>
-            <h1>Etch Your Sketch</h1>
-        </header>
-        <div id="operators">
-            <p>Choose Your Sketch Book Size</p>
+        <div class="upper-container" id="upper-container">
+            <header>
+                <h1>Etch Your Sketch</h1>
+            </header>
             <div id="size">
+                <p>Choose Your Sketch Book Size</p>
                 <input type="number" id="height" placeholder="Height" required> 
                 <span id="times">x</span>
                 <input type="number" id="width" placeholder="Width" required> 
@@ -20,8 +20,9 @@
             <button id="clear" class="button">Clear</button>
             <button id="black" class="button">Black</button>
             <button id="random" class="button">Random Color</button>
-            <div class="container" id="container">
-            </div>
+        </div>
+        <div class="container" id="container">
+        </div>
         </div>
         <footer> 2020 - Created by Irem for The Odin Project</footer>
     </body>
