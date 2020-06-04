@@ -23,7 +23,6 @@ function createGrid(height, width) {
         const square = document.createElement("div");
         square.className = "square";
         square.id = i + 1;
-        square.innerText = "+";
         square.style.backgroundColor = "purple"
         // square.style.float = "left"
         square.style.border = "1px black solid";
@@ -33,5 +32,8 @@ function createGrid(height, width) {
 
 
 function deleteGrid() {
-}
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => square.style.backgroundColor = "transparent");
+    squares.forEach(square => square.style.border = "transparent");
+};
 
