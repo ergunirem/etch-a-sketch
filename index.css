@@ -1,5 +1,26 @@
-html {
-    background-color: rgb(205, 235, 211);
+#upper-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+#size {
+    grid-column: 2 / 4;
+
+}
+
+header {
+    grid-column: 1 / 2;
+}
+
+/* SKETCH BOOK GRID STYLE */
+#container {
+    display: grid; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 500px; 
+    width: 500px;
 }
 
 /* FOOTER */
@@ -12,8 +33,7 @@ footer {
     font-family: Georgia, sans-serif;
     font-weight: bold;
     font-size: 15px;
-    word-spacing: 30px;
-    background-image: url(https://st3.depositphotos.com/5580114/18854/v/1600/depositphotos_188543524-stock-illustration-abstract-geometric-pattern-with-small.jpg);
-    background-repeat: no-repeat;
+    word-spacing: 10px;
+    background-image: linear-gradient(#B4C9CC, #A2C1C9);
 }
 
