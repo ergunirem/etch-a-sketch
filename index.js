@@ -30,10 +30,26 @@ function createGrid(height, width) {
     }
 };
 
+function resetGrid() {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => square.remove());
+}
 
 function deleteGrid() {
     const squares = document.querySelectorAll(".square");
     squares.forEach(square => square.style.backgroundColor = "transparent");
     squares.forEach(square => square.style.border = "transparent");
 };
+
+function color() {
+
+}
+
+function randomColor() {
+
+}
+
+function rainbowColor() {
+
+}
 
