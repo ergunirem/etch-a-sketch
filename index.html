@@ -13,9 +13,9 @@
             </header>
             <div id="size">
                 <p>Choose Your Sketch Book Size</p>
-                <input type="number" id="height" placeholder="Height" required> 
+                <input type="number" id="height" placeholder="Height" max="100" oninvalid="alert('Please enter a number');" required> 
                 <span id="times">x</span>
-                <input type="number" id="width" placeholder="Width" required> 
+                <input type="number" id="width" placeholder="Width" max="100" oninvalid="alert('Please enter a number');" required> 
                 <button type="submit" id="submit" class="submit-button"value="Submit">Create</button> 
             </div>
             <button id="clear" class="button">Clear</button>
