@@ -4,6 +4,7 @@ let currentColor = "black"
 
 // EVENTS
 
+// document.getElementById("submit").addEventListener("click", () => {createGrid(); checkValidity();});
 document.getElementById("submit").addEventListener("click", createGrid);
 document.getElementById("clear").addEventListener("click", clearGrid);
 document.getElementById("black").addEventListener("click", color);
@@ -12,6 +13,12 @@ document.getElementById("random").addEventListener("click", randomColor);
 // FUNCTIONS
 
 function createGrid() {
+    if (document.getElementById('height').validity.valid == false ||
+    document.getElementById('width').validity.valid == false) {
+        alert('Please enter a number between 2 and 100');
+        return false;
+    };
+    
     resetGrid()
 
     const width = parseInt(document.getElementById("width").value);
