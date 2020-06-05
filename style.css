@@ -1,0 +1,51 @@
+/* GENERAL */
+body {
+    background-image: linear-gradient(#F2F2F2, #A9C4CA);
+}
+
+/* HEADER AND BUTTONS STYLE */
+#upper-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: (100px 100px);
+    grid-gap: 20px;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Rosario', sans-serif;
+}
+
+header {
+    grid-column: 1 / 2;
+    text-align: center;
+}
+
+#size {
+    align-items: center;
+    grid-column: 3 / 4;
+
+}
+
+/* SKETCH BOOK GRID STYLE */
+#container {
+    display: grid; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 500px; 
+    width: 500px;
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    font-family: 'Rosario', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    word-spacing: 10px;
+    background-image: linear-gradient(#B4C9CC, #A2C1C9);
+}
+
